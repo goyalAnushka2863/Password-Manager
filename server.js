@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URI)
 // Middleware
 app.use(express.json());
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://pass-op-frontend.vercel.app'],
+  origin: '*',
   optionsSuccessStatus: 200
 };
 
