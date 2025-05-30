@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components{
+  .mycontainer{
+    @apply container px-40 py-16 mx-auto
+  }
+}
+/* Target the scrollbar container */
+::-webkit-scrollbar {
+  width: 5px; /* For vertical scrollbar */
+  height: 12px; /* For horizontal scrollbar */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: #00000000; /* Light gray background */
+  border-radius: 10px;
+}
+
+/* Scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Darker gray */
+  border-radius: 10px;
+  border: 3px solid #f0f0f0; /* Matches track color */
+}
+
+/* Scrollbar thumb hover state */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker on hover */
+}
