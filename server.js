@@ -13,8 +13,12 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Middleware
 app.use(express.json());
-app.use(cors());
-
+app.use(
+    cors({
+        origin: "*",
+        credentials:true
+    })
+);
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/passwords', require('./routes/passwords'));
